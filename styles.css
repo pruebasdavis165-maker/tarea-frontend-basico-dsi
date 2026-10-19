@@ -1,0 +1,133 @@
+/* Variables de color y estilos base */
+:root {
+    --primary-color: #2563eb;
+    --primary-hover: #1d4ed8;
+    --text-color: #1f2937;
+    --text-muted: #4b5563;
+    --bg-color: #f3f4f6;
+    --card-bg: #ffffff;
+    --border-color: #e5e7eb;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 24px 16px;
+}
+
+.container {
+    background-color: var(--card-bg);
+    max-width: 680px;
+    width: 100%;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-color);
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 28px;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    flex-shrink: 0;
+}
+
+h1 {
+    font-size: 1.75rem;
+    color: #111827;
+    margin-bottom: 8px;
+    line-height: 1.25;
+}
+
+.bio {
+    font-size: 1rem;
+    color: var(--text-muted);
+}
+
+h3 {
+    font-size: 1.2rem;
+    color: #111827;
+    margin: 28px 0 14px 0;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 6px;
+}
+
+.skills-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.skills-list li {
+    background-color: #f9fafb;
+    border: 1px solid var(--border-color);
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: #374151;
+}
+
+.skills-list li strong {
+    color: #111827;
+    margin-right: 6px;
+}
+
+.contact-section {
+    margin-top: 24px;
+}
+
+.contact-section p {
+    color: var(--text-muted);
+    margin-bottom: 12px;
+}
+
+.repo-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.repo-link:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-1px);
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 24px;
+    }
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+}
